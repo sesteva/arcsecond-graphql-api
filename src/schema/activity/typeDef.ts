@@ -6,8 +6,6 @@ export const typeDef = gql`
     activity(id: Int!): Activiy
   }
 
-  scalar Date
-
   type Activiy {
     id: Int!
     links: [Link]
