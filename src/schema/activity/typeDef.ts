@@ -1,5 +1,4 @@
 import { gql } from 'apollo-server'
-import { activities } from '../mocks'
 
 export const typeDef = gql`
   extend type Query {
@@ -35,37 +34,19 @@ export const typeDef = gql`
 
   type Coordinates {
     system: String
-    right_ascension: Int
+    right_ascension: Float
     right_ascension_units: String
-    declination: Int
+    declination: Float
     declination_units: String
-    epoch: Int
-  }
-
-  enum ObservingMode {
-    Visitor
-    Service
-  }
-
-  enum ProgrammeType {
-    Normal
-    Programme
-    Guaranteed
-    TimeObservations
-    DirectorsDiscretionaryTime
-    TargetofOpportunity
-    LargeProgramme
-    ShortProgramme
-    CalibrationProgramme
-    MonitoringProgramme
+    epoch: Float
   }
 
   type Programme {
     id: Int!
     programme_id: String
     period: String
-    observing_mode: ObservingMode
-    programme_type: ProgrammeType
+    observing_mode: String
+    programme_type: String
     allocated_time: String
     telescope_name: String
     instrument_name: String
@@ -79,12 +60,3 @@ export const typeDef = gql`
     publications_url: String
   }
 `
-
-export const resolvers = {
-  Query: {
-    activities: () => activities,
-    activity: (_: void, { id }: any): any => {
-      return activities[id]
-    }
-  }
-}
