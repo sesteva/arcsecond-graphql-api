@@ -41,7 +41,7 @@ export const typeDef = gql`
 
   type ExoplanetCoordinatesResult {
     name: String
-    coordinated: ExoplanetCoordinates
+    coordinates: ExoplanetCoordinates
   }
   type ExoplanetCoordinates {
     system: String

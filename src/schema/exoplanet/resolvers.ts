@@ -6,19 +6,19 @@ export const resolvers = {
       const pageArg = page ? `page=${page}&` : ''
       const pageSizeArg = page_size ? `page_size=${page_size}&` : ''
       const args = `${pageArg}${pageSizeArg}`.slice(0, -1)
-      const { data } = await get(`/exoplanets/?${args}`)
+      const { data } = await get(`/exoplanets/?${args}/`)
       return data.results
     },
     exoplanet: async (_: void, { id }: any): Promise<any> => {
-      const { data } = await get(`/exoplanet/${id}`)
+      const { data } = await get(`/exoplanets/${id}/`)
       return data
     },
     exoplanetByName: async (_: void, { name }: any): Promise<any> => {
-      const { data } = await get(`/exoplanet/${name}`)
+      const { data } = await get(`/exoplanets/${name}/`)
       return data
     },
     exoplanetCoordinates: async (_: void, { name }: any): Promise<any> => {
-      const { data } = await get(`/exoplanet/${name}/coordinates`)
+      const { data } = await get(`/exoplanets/${name}/coordinates/`)
       return data
     }
   }
