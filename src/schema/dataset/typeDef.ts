@@ -2,7 +2,7 @@ import { gql } from 'apollo-server'
 
 export const typeDef = gql`
   extend type Query {
-    datasets(id: Int!, uuid: String!): Dataset
+    dataset(id: Int!, uuid: String!): Dataset
   }
 
   type Dataset {

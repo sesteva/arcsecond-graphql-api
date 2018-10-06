@@ -2,8 +2,8 @@ import { get } from '../../services'
 
 export const resolvers = {
   Query: {
-    coordinates: async (_: void, { id }: any): Promise<any> => {
-      const { data } = await get(`/coordinates/${id}/`)
+    dataset: async (_: void, { id, uuid }: any): Promise<any> => {
+      const { data } = await get(`/datasets/${uuid}/fitsfiles/${id}/`)
       return data
     }
   }
