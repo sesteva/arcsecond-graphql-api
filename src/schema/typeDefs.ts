@@ -4,6 +4,7 @@ import { typeDef as Archive } from './archive'
 import { typeDef as Converter } from './converter'
 import { typeDef as Coordinates } from './coordinates'
 import { typeDef as Dataset } from './dataset'
+import { typeDef as Exoplanet } from './exoplanet'
 
 const Scalars = gql`
   scalar Date
@@ -21,7 +22,8 @@ const typeDefs = [
   Archive,
   Converter,
   Coordinates,
-  Dataset
+  Dataset,
+  Exoplanet
 ]
 
 export default typeDefs
