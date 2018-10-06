@@ -8,11 +8,11 @@ export const resolvers = {
     },
     archivesESOData: async (_: void, { page }: any): Promise<any> => {
       const pageArg = page ? `?page=${page}` : ''
-      const { data } = await get(`/archives/ESO/data/${pageArg}`)
+      const { data } = await get(`/archives/ESO/data/${pageArg}/`)
       return data.results
     },
     archive: async (_: void, { name }: any): Promise<any> => {
-      const { data } = await get(`/archives/${name}`)
+      const { data } = await get(`/archives/${name}/`)
       return data
     }
   },
