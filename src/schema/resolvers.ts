@@ -5,6 +5,7 @@ import { resolvers as converter } from './converter'
 import { resolvers as coordinates } from './coordinates'
 import { resolvers as dataset } from './dataset'
 import { resolvers as exoplanet } from './exoplanet'
+import { resolvers as findingchart } from './findingchart'
 
 const resolvers = merge(
   activity,
@@ -12,7 +13,8 @@ const resolvers = merge(
   converter,
   coordinates,
   dataset,
-  exoplanet
+  exoplanet,
+  findingchart
 )
 
 export default resolvers

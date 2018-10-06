@@ -5,6 +5,7 @@ import { typeDef as Converter } from './converter'
 import { typeDef as Coordinates } from './coordinates'
 import { typeDef as Dataset } from './dataset'
 import { typeDef as Exoplanet } from './exoplanet'
+import { typeDef as FindingChart } from './findingchart'
 
 const Scalars = gql`
   scalar Date
@@ -23,7 +24,8 @@ const typeDefs = [
   Converter,
   Coordinates,
   Dataset,
-  Exoplanet
+  Exoplanet,
+  FindingChart
 ]
 
 export default typeDefs
