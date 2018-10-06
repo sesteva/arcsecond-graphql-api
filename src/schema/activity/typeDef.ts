@@ -13,7 +13,7 @@ export const typeDef = gql`
     telescope: String
     instrument: String
     target: String
-    coordinates: Coordinates
+    coordinates: ActivityCoordinates
     profile: String
     collaboration: Int
     organisation: Int
@@ -30,7 +30,7 @@ export const typeDef = gql`
     url: String
   }
 
-  type Coordinates {
+  type ActivityCoordinates {
     system: String
     right_ascension: Float
     right_ascension_units: String
