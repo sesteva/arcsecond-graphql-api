@@ -17,12 +17,4 @@ export const typeDef = gql`
     hdus: String
     instrument: Instrument
   }
-
-  type Instrument {
-    uuid: String
-    archive: Archive
-    name: String
-    acronym: String
-    telescope: String
-  }
 `

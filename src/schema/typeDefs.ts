@@ -7,6 +7,7 @@ import { typeDef as Dataset } from './dataset'
 import { typeDef as Exoplanet } from './exoplanet'
 import { typeDef as FindingChart } from './findingchart'
 import { typeDef as FitFiles } from './fitfiles'
+import { typeDef as Instrument } from './instrument'
 
 const Scalars = gql`
   scalar Date
@@ -27,7 +28,8 @@ const typeDefs = [
   Dataset,
   Exoplanet,
   FindingChart,
-  FitFiles
+  FitFiles,
+  Instrument
 ]
 
 export default typeDefs
