@@ -9,6 +9,7 @@ import { resolvers as findingchart } from './findingchart'
 import { resolvers as fitfiles } from './fitfiles'
 import { resolvers as instrument } from './instrument'
 import { resolvers as interferometer } from './interferometer'
+import { resolvers as nightlog } from './nightlog'
 
 const resolvers = merge(
   activity,
@@ -20,7 +21,8 @@ const resolvers = merge(
   findingchart,
   fitfiles,
   instrument,
-  interferometer
+  interferometer,
+  nightlog
 )
 
 export default resolvers

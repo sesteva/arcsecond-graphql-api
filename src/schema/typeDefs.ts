@@ -9,6 +9,7 @@ import { typeDef as FindingChart } from './findingchart'
 import { typeDef as FitFiles } from './fitfiles'
 import { typeDef as Instrument } from './instrument'
 import { typeDef as Interferometer } from './interferometer'
+import { typeDef as Nightlog } from './nightlog'
 
 const Scalars = gql`
   scalar Date
@@ -31,7 +32,8 @@ const typeDefs = [
   FindingChart,
   FitFiles,
   Instrument,
-  Interferometer
+  Interferometer,
+  Nightlog
 ]
 
 export default typeDefs
