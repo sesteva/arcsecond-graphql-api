@@ -2,7 +2,7 @@ import { gql } from 'apollo-server'
 
 export const typeDef = gql`
   extend type Query {
-    exoplanets(page: Int, page_size: Int): [Exoplanet]
+    exoplanets(page: Int, page_size: Int, search: String): [Exoplanet]
     exoplanet(id: Int!): Exoplanet
     exoplanetByName(name: String!): Exoplanet
     exoplanetCoordinates(name: String!): ExoplanetCoordinatesResult
