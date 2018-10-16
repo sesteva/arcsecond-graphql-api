@@ -1,4 +1,2 @@
 # arcsecond-graphql-api
-Arcsecond GraphQL API
-
-Defer the suspense of discovering the universe
+[Defer the suspense of discovering the universe 🌌](https://codesandbox.io/s/nrr4orpx0l)
