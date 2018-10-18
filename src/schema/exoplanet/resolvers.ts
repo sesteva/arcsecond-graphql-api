@@ -1,10 +1,9 @@
-import { get } from '../../services'
-
 export const resolvers = {
   Query: {
     exoplanets: async (
-      _: void,
-      { page, page_size, search }: any
+      obj: void,
+      { page, page_size, search }: any,
+      { get }: any
     ): Promise<any> => {
       const pageArg = page ? `page=${page}&` : ''
       const pageSizeArg = page_size ? `page_size=${page_size}&` : ''
@@ -13,15 +12,23 @@ export const resolvers = {
       const { data } = await get(`/exoplanets/?${args}`)
       return data.results
     },
-    exoplanet: async (_: void, { id }: any): Promise<any> => {
+    exoplanet: async (obj: void, { id }: any, { get }: any): Promise<any> => {
       const { data } = await get(`/exoplanets/${id}/`)
       return data
     },
-    exoplanetByName: async (_: void, { name }: any): Promise<any> => {
+    exoplanetByName: async (
+      obj: void,
+      { name }: any,
+      { get }: any
+    ): Promise<any> => {
       const { data } = await get(`/exoplanets/${name}/`)
       return data
     },
-    exoplanetCoordinates: async (_: void, { name }: any): Promise<any> => {
+    exoplanetCoordinates: async (
+      obj: void,
+      { name }: any,
+      { get }: any
+    ): Promise<any> => {
       const { data } = await get(`/exoplanets/${name}/coordinates/`)
       return data
     }

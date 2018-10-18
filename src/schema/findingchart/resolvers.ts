@@ -1,8 +1,10 @@
-import { get } from '../../services'
-
 export const resolvers = {
   Query: {
-    findingcharts: async (_: void, { input }: any): Promise<any> => {
+    findingcharts: async (
+      obj: void,
+      { input }: any,
+      { get }: any
+    ): Promise<any> => {
       const { data } = await get(`/findingcharts/${input}/`)
       return data
     }

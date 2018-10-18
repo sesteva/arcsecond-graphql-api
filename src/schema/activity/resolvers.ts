@@ -1,12 +1,10 @@
-import { get } from '../../services'
-
 export const resolvers = {
   Query: {
-    activities: async (): Promise<any> => {
+    activities: async (obj: void, args: any, { get }: any): Promise<any> => {
       const { data } = await get('/activities/')
       return data
     },
-    activity: async (_: void, { id }: any): Promise<any> => {
+    activity: async (obj: void, { id }: any, { get }: any): Promise<any> => {
       const { data } = await get(`/activities/${id}/`)
       return data
     }
