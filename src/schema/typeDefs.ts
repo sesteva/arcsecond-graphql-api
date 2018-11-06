@@ -30,7 +30,7 @@ const Subscription = gql`
   }
 `
 
-const Global = [Scalars, Query]
+const Global = [Scalars, Query, Mutation]
 
 const typeDefs = [
   ...Global,
