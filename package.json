@@ -1,9 +1,7 @@
 {
   "name": "arcsecond-graphql-api",
   "scripts": {
-    "start": "nodemon",
-    "dev": "npm-run-all --parallel start playground",
-    "playground": "graphql playground"
+    "start": "nodemon"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.116",

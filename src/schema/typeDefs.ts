@@ -19,10 +19,21 @@ const Query = gql`
     _empty: String
   }
 `
+const Mutation = gql`
+  type Mutation {
+    _empty: String
+  }
+`
+const Subscription = gql`
+  type Subscription {
+    _empty: String
+  }
+`
+
+const Global = [Scalars, Query]
 
 const typeDefs = [
-  Scalars,
-  Query,
+  ...Global,
   Activity,
   Archive,
   Converter,
